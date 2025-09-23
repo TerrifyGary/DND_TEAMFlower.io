@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { sampleCharacters } from "@/lib/characters"
-import { getBasePath } from "@/lib/utils" // Import getBasePath
 
 export async function generateStaticParams() {
   return sampleCharacters.map((character) => ({
@@ -40,7 +39,7 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
       {/* Main Content */}
       <main className="container mx-auto px-6 py-8">
         <div className="mb-8">
-          <Link href={getBasePath()}>
+          <Link href="/">
             <Button variant="ghost" size="sm" className="gap-2 mb-4">
               <ArrowLeft className="w-4 h-4" />
               Back to Party
@@ -62,7 +61,7 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
               <CardContent className="p-6">
                 <div className="aspect-[3/4] relative mb-4 overflow-hidden rounded-lg bg-muted">
                   <img
-                    src={`${getBasePath()}${character.image || "/placeholder.svg"}`}
+                    src={`${character.image || "/placeholder.svg"}`}
                     alt={character.name}
                     className="w-full h-full object-cover"
                   />
