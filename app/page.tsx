@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { sampleCharacters } from "@/lib/characters"
+import nextConfig from "@/next.config.mjs"
 
 export default function HomePage() {
   return (
@@ -25,7 +26,7 @@ export default function HomePage() {
                 <CardHeader className="pb-4">
                   <div className="aspect-[3/4] relative mb-4 overflow-hidden rounded-lg bg-muted">
                     <img
-                      src={character.image || "/placeholder.svg"}
+                      src={`${nextConfig.basePath || ""}${character.image || "/placeholder.svg"}`}
                       alt={character.name}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
