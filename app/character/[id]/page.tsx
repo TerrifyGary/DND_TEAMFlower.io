@@ -8,12 +8,18 @@ import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { sampleCharacters } from "@/lib/characters"
 
+export async function generateStaticParams() {
+  return sampleCharacters.map((character) => ({
+    id: character.id,
+  }))
+}
+
 interface CharacterPageProps {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
 export default async function CharacterPage({ params }: CharacterPageProps) {
-  const { id } = await params
+  const { id } = params
   const character = sampleCharacters.find((c) => c.id === id)
 
   if (!character) {
