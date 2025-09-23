@@ -1,42 +1,35 @@
-name: Deploy to GitHub Pages
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main # Set this to your default branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write # Required for OIDC
-      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Or your preferred Node.js version
+          node-version: '20' # Use a compatible Node.js version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build Next.js application
         run: npm run build
 
-      - name: List output directory
-        run: ls -la out
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # Or your static build output directory (e.g., ./build)
-          # If you are using a custom domain, uncomment the following line and replace with your domain
-          # cname: example.com
+          publish_dir: ./out
+          cname: terrifygary.github.io
