@@ -24,9 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Export static site (if Next.js)
-        run: npm run export # This step assumes you have an "export" script in package.json for static export
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
