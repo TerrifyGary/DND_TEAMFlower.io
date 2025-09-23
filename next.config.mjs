@@ -10,7 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/DND_TEAMFlower.io', // Set the base path for GitHub Pages
+  basePath: '/DND_TEAMFlower.io', // Set the base path for GitHub Pages/
 }
 
 export default nextConfig
