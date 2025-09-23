@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
@@ -6,12 +8,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { SiteHeader } from "@/components/site-header"
 import "./globals.css"
-
-export const metadata: Metadata = {
-  title: "Adventurer's Codex - D&D Character Manager",
-  description: "Manage and explore your D&D characters and their adventures",
-  generator: "v0.app",
-}
+import { Toaster } from "@/components/ui/toaster"
+import { cn } from "@/lib/utils"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export default function RootLayout({
   children,

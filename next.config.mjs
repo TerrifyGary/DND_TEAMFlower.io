@@ -1,17 +1,19 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
+  output: 'export',
+  distDir: 'out',
+  images: {
+    unoptimized: true,
+  },
+  assetPrefix: isProd ? '/DND_TEAMFlower.io/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
-  output: 'export',
-  basePath: '/DND_TEAMFlower.io', // Set the base path for GitHub Pages
-  assetPrefix: 'https://TerrifyGary.github.io/DND_TEAMFlower.io',
 }
 
 export default nextConfig
