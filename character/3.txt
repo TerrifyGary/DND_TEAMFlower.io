@@ -1,7 +1,7 @@
 1:HL["https://TerrifyGary.github.io/DND_TEAMFlower.io/_next/static/media/028c0d39d2e8f589-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["https://TerrifyGary.github.io/DND_TEAMFlower.io/_next/static/media/5b01f339abf2f1a5.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:HL["https://TerrifyGary.github.io/DND_TEAMFlower.io/_next/static/css/8c73af3dd4fbeb9c.css","style",{"crossOrigin":""}]
-0:["iXUI2Rk4dqM6T8rq00FOk",[[["",{"children":["character",{"children":[["id","3","d"],{"children":["__PAGE__?{\"id\":\"3\"}",{}]}]}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"https://TerrifyGary.github.io/DND_TEAMFlower.io/_next/static/css/8c73af3dd4fbeb9c.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
+0:["PlgfkX8x1yGhDTKdtuS0k",[[["",{"children":["character",{"children":[["id","3","d"],{"children":["__PAGE__?{\"id\":\"3\"}",{}]}]}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"https://TerrifyGary.github.io/DND_TEAMFlower.io/_next/static/css/8c73af3dd4fbeb9c.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
 6:I[8326,["326","static/chunks/326-992f00e435b00639.js","406","static/chunks/app/character/%5Bid%5D/not-found-85de72b99b7a57bb.js"],""]
 7:I[2780,["895","static/chunks/895-78119114f1f7b1f2.js","326","static/chunks/326-992f00e435b00639.js","185","static/chunks/app/layout-acf367186bd0803b.js"],"Navigation"]
 8:"$Sreact.suspense"
