@@ -33,3 +33,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           cname: terrifygary.github.io
+          # The deployment will be to https://terrifygary.github.io/DND_TEAMFlower.io/
+          # The CNAME is not strictly necessary for project pages, but can be useful for custom domains.
+          # For project pages, the base path is handled by Next.js basePath configuration.
