@@ -3,12 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Users, Scroll, Dice6 } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn, getBasePath } from "@/lib/utils"
 
 const navigation = [
-  { name: "Party", href: "/", icon: Users },
-  { name: "Adventures", href: "/adventures", icon: Scroll },
-  { name: "Dice Roller", href: "/dice", icon: Dice6 },
+  { name: "Party", href: getBasePath() + "/", icon: Users },
+  { name: "Adventures", href: getBasePath() + "/adventures", icon: Scroll },
+  { name: "Dice Roller", href: getBasePath() + "/dice", icon: Dice6 },
 ]
 
 export function Navigation() {
