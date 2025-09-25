@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { sampleCharacters } from "@/lib/characters"
+import nextConfig from "@/next.config.mjs"
 
 export async function generateStaticParams() {
   return sampleCharacters.map((character) => ({
@@ -61,7 +62,7 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
               <CardContent className="p-6">
                 <div className="aspect-[3/4] relative mb-4 overflow-hidden rounded-lg bg-muted">
                   <img
-                    src={`${character.image || "/placeholder.svg"}`}
+                    src={`${nextConfig.basePath || ""}${character.image || "/placeholder.svg"}`}
                     alt={character.name}
                     className="w-full h-full object-cover"
                   />
