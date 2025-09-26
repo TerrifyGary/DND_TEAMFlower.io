@@ -83,10 +83,6 @@ export default function AdventuresPage() {
               <h1 className="text-4xl font-bold text-foreground mb-2">Adventure Chronicles</h1>
               <p className="text-muted-foreground">Keep track of your party's epic journeys and memorable moments</p>
             </div>
-            <Button onClick={() => setIsCreating(true)} className="flex items-center gap-2" disabled={isCreating}>
-              <Plus className="w-4 h-4" />
-              New Entry
-            </Button>
           </div>
 
           {/* Create New Log Form */}
